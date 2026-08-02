@@ -103,7 +103,7 @@ if [ -z "${1:-}" ]; then
 else
 	case "$1" in
 		-l|--list)
-			ls "${2:-}" -- "$folder"
+			ls ${2:-} -- "$folder"
 			exit 0
 			;;
 		-d|--dir)
