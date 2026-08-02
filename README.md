@@ -122,23 +122,17 @@ That's it. Open a terminal, get a splash. Just like connecting to your favorite 
 ---
 ## TIPS & TRICKS
 
-Add classes to your image collection (or monthly calendar or by the hour of the day):  
+Add classes to your image collection (or monthly calendar, or by the hour of the day):  
 Snoopy.cartoons.jpg  
 Mickey Mouse.cartoons.gif  
 Captain America.comics.webp  
 Amiga.logos.svg  
 Commodore.logos.bmp
 
-**Now, when you ececute:**  
+**Now, specify class when you ececute:**  
 ```
 show cartoon
-```
-**OR**  
-```
 show comic
-```
-**OR**
-```
 show logo
 ```
 **...you guessed it...**
