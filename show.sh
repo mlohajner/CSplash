@@ -52,12 +52,15 @@ check_deps() {
 }
 
 pick_random() {
-#	$1 = optional name filter (may be empty)
+	# $1 = optional name filter (may be empty)
+	# -L: follow symlinks, so a symlinked .csplash directory (e.g. root's
+	# .csplash -> /home/user/.csplash) is traversed instead of being
+	# treated as an opaque link with no contents.
 	local filter="$1" result
 	if [ -n "$filter" ]; then
-		result=$(find "$folder" -type f -iname "*${filter}*" 2>/dev/null | shuf -n 1)
+		result=$(find -L "$folder" -type f -iname "*${filter}*" 2>/dev/null | shuf -n 1)
 	else
-		result=$(find "$folder" -type f 2>/dev/null | shuf -n 1)
+		result=$(find -L "$folder" -type f 2>/dev/null | shuf -n 1)
 	fi
 	printf '%s' "$result"
 }
