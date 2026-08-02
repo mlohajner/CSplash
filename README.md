@@ -122,7 +122,7 @@ That's it. Open a terminal, get a splash. Just like connecting to your favorite 
 ---
 ## TIPS & TRICKS
 
-Add tags to your image collection (or monthly calendar, or by the hour of the day):  
+Add tags to your image collection (or monthly calendar, or time of the day):  
 Snoopy.cartoon.jpg  
 Mickey Mouse.cartoon.gif  
 Captain America.comic.webp  
