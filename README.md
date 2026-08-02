@@ -21,7 +21,7 @@ Your collection, your rules. Drop in **ASCII/ANSI art**, **photos**, or even **a
 
 ## Powered by chafa
 
-CSplash is a thin, opinionated wrapper — all the actual terminal-graphics magic comes from **[chafa](https://hpjansson.org/chafa/)**, the excellent open-source tool that converts images and animations into stunning character/ANSI art for the terminal.
+CSplash is a thin wrapper, all the actual terminal-graphics magic comes from **[chafa](https://hpjansson.org/chafa/)**, the excellent open-source tool that converts images and animations into stunning character/ANSI art for the terminal.
 
 All credit for the rendering engine goes to chafa and its author, Hans Petter Jansson. CSplash just adds the ritual around it: picking, sequencing, scanning, and the show.
 
@@ -34,9 +34,7 @@ Make sure `chafa` (and `identify` from ImageMagick, used for detecting animated 
 ## What it looks like
 
 ```
-$ show
-
-my-favorite-bbs-intro
+$ show.sh my-favorite-bbs-intro
 
 [ image scans onto your terminal, line by line ]
 ```
@@ -46,6 +44,32 @@ Static images and ASCII/ANSI art scan in gracefully, line by line, like text cra
 ---
 
 ## Usage
+
+`show.sh` is meant to **live inside `.csplash`** — the very folder that holds your collection of terminal welcome images. The script and your art sit together, so the whole thing is one self-contained, portable, drop-in-anywhere unit.
+
+### Setup
+
+```bash
+mkdir -p ~/.csplash
+mv show.sh ~/.csplash/show.sh
+chmod +x ~/.csplash/show.sh
+ln -s ~/.csplash/show.sh ~/.local/bin/show   # or anywhere on your $PATH
+```
+
+Now drop your images, ASCII/ANSI art, or animations straight into `~/.csplash/` alongside `show.sh`:
+
+```
+~/.csplash/
+├── show.sh              # the script itself — lives here, not somewhere else
+├── amiga-boot.png
+├── bbs-welcome.ans
+├── matrix-rain.gif
+└── my-logo.txt
+```
+
+Everything in there (except `show.sh` itself and any `.comments*` files) is fair game for the show.
+
+### Commands
 
 ```bash
 show                # random splash from your collection
@@ -57,11 +81,19 @@ show -v, --version  # print version info
 show -h, --help     # show all of the above
 ```
 
-### Your collection
+A closer look at each:
 
-By default CSplash looks in `~/.csplash`. Drop any images, ASCII/ANSI art files, or animations in there and they're instantly part of the rotation.
+- **`show`** — no arguments, pure chance. Picks any file from `.csplash` at random and displays it. This is the one you'd run on every new terminal.
+- **`show <keyword>`** — narrows the random pick to files whose *name* contains `<keyword>` (case-insensitive). Great for grouping collections by prefix or tag, e.g. `show retro`, `show amiga`, `show xmas`.
+- **`show -l` / `show --list`** — lists the contents of your `.csplash` folder, so you can see what's in rotation. Accepts an optional `ls` flag as a second argument, e.g. `show -l -la` for a long listing.
+- **`show -d` / `show --dir`** — prints the resolved path of your splash folder. Handy for scripting or double-checking where CSplash is actually looking (especially if `CSPLASH_DIR` is set).
+- **`show -e` / `show --edit`** — opens `show.sh` itself in `nano`, right from wherever it lives inside `.csplash`. Since script and collection live together, editing the show is always one command away.
+- **`show -v` / `show --version`** — prints the CSplash banner and version.
+- **`show -h` / `show --help`** — prints usage help, including the environment variables below.
 
-Want them somewhere else? Point CSplash at any folder:
+### Your collection, anywhere
+
+By default CSplash looks in `~/.csplash`. Want to point it at a different collection without moving anything?
 
 ```bash
 export CSPLASH_DIR=/path/to/your/splash/collection
