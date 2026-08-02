@@ -151,4 +151,4 @@ Go wild:
 - **chafa** - the terminal graphics engine that makes this all possible: https://hpjansson.org/chafa/
 - **CSplash** - by Mario Lohajner, 2024 (2026)
 
-#*Dial-up tone not included. Nostalgia guaranteed.*
+# *Dial-up tone not included. Nostalgia guaranteed.*
