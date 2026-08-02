@@ -8,12 +8,12 @@
 
 ## The idea
 
-Terminals today just... open. Blank. Silent. A blinking cursor and nothing else — efficient, sure, but there's no *arrival*. No sense that something is glad to see you.
+Terminals today just... open. Blank. Silent. Dry. A blinking cursor and nothing else - efficient, sure, but there's no *arrival*. No sense that something is glad to see you.
 
 CSplash fixes that with two simple beliefs:
 
 1. **Nostalgia is a feature.** The BBS era had a ritual: dial, connect, wait a beat, and be greeted by hand-crafted art that told you *this* board had personality. That ritual is worth bringing back.
-2. **Your terminal deserves a proper welcome.** Instead of the cold shock of an empty prompt, CSplash greets you with an image from your own collection — gracefully **scanned onto the screen line by line**, exactly like the old days — before handing you off to your shell.
+2. **Your terminal deserves a proper welcome.** Instead of the cold shock of an empty prompt, CSplash greets you with an image from your own collection - gracefully **scanned onto the screen line by line**, exactly like the old days - before handing you off to your shell.
 
 Your collection, your rules. Drop in **ASCII/ANSI art**, **photos**, or even **animations**, and CSplash picks one at random (or by name) and renders it right there in your terminal.
 
