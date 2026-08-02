@@ -8,7 +8,8 @@
 
 ## The idea
 
-Terminals today just... open. Blank. Silent. Dry. A blinking cursor and nothing else - efficient, sure, but there's no *arrival*. No sense that something is glad to see you.
+Terminals today just... open. Blank. Silent. Dry.  
+A blinking cursor and nothing else - efficient, sure, but there's no *arrival*. No sense that something is glad to see you.
 
 CSplash fixes that with two simple beliefs:
 
