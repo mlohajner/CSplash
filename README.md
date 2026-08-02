@@ -122,20 +122,27 @@ That's it. Open a terminal, get a splash. Just like connecting to your favorite 
 ---
 ## TIPS & TRICKS
 
-Add classes to your image collection (or monthly calendar, or by the hour of the day):  
-Snoopy.cartoons.jpg  
-Mickey Mouse.cartoons.gif  
-Captain America.comics.webp  
-Amiga.logos.svg  
-Commodore.logos.bmp
+Add tags to your image collection (or monthly calendar, or by the hour of the day):  
+Snoopy.cartoon.jpg  
+Mickey Mouse.cartoon.gif  
+Captain America.comic.webp  
+Amiga.logo.svg  
+Commodore.logo.bmp
 
-**Now, specify class when you execute:**  
-```
+**Now you can summon a specific mood:**  
+```bash
 show cartoon
 show comic
 show logo
 ```
-**...you guessed it...**
+**Can you guess what happens?**  
+CSplash searches filenames, so your naming style becomes your organization system.
+
+Go wild:
+- seasonal splashes (christmas, halloween, summer)
+- time-of-day greetings (morning, night)
+- reminders (water, coffee, beer)
+- moods (retro, funny, coding)
 
 ---
 
