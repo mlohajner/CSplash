@@ -143,7 +143,7 @@ if [ -f "$filename" ]; then
 	file=${filename##*/}
 	base=${file%%.*}
 	echo "$base"
-	if [ "$(identify "$filename" 2>/dev/null | wc -l)" -gt 1 ]; then
+	if [ `identify "$filename" | wc -l` -gt 1 ] ; then
 		timeout 5 chafa "$filename" -w 9 --margin-bottom 5 --bg "$bg"
 	else
 		chafa "$filename" -w 9 --margin-bottom 5 --bg "$bg" | slow_scan
