@@ -125,7 +125,7 @@ fi
 # Skip generated/internal files (show script itself, .comments*),
 # re-rolling within the same filter set. Cap attempts to avoid infinite loop.
 attempts=0
-while [ -n "$filename" ] && { [ "$(basename "$filename")" == "$self" ] || [[ "$(basename "$filename")" == .comments* ]]; }; do
+while [ -n "$filename" ] && { [ "$(basename "$filename")" == "$self" ] || [[ "$filename" == */.comments/* ]] || [[ "$(basename "$filename")" == .comments* ]]; }; do
 	filename=$(pick_random "$filter")
 	attempts=$((attempts + 1))
 	if [ "$attempts" -ge 20 ]; then
