@@ -117,8 +117,25 @@ Add this to your `.bashrc` / `.zshrc` so every new terminal gets a proper welcom
 ```bash
 show
 ```
-
 That's it. Open a terminal, get a splash. Just like connecting to your favorite BBS.
+
+---
+## TIPS & TRICKS
+
+Add classes to your image collection (or monthly calendar or by the hour of the day):
+Snoopy.cartoons.jpg
+Mickey Mouse.cartoons.gif
+Captain America.comics.webp
+
+Now, when you ececute:
+```
+show cartoon
+```
+OR
+```
+show comic
+```
+**...you guessed it...**
 
 ---
 
