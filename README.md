@@ -129,7 +129,7 @@ Captain America.comics.webp
 Amiga.logos.svg  
 Commodore.logos.bmp
 
-**Now, specify class when you ececute:**  
+**Now, specify class when you execute:**  
 ```
 show cartoon
 show comic
