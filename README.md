@@ -1,6 +1,6 @@
 # 📟 CSplash — Chafa Splash Show
 
-> *Remember the sound?* That electric screech-and-hiss of a dial-up modem handshaking with a BBS a thousand miles away — and then, right after, that glorious ANSI intro screen scanning onto your CRT, line by line, welcoming you home.
+> *Remember the sound?* That electric screech-and-hiss of a dial-up modem handshaking with a BBS a thousand miles away - and then, right after, that glorious ANSI intro screen scanning onto your CRT, line by line, welcoming you home.
 
 **CSplash brings that moment back. Every time you open a terminal.**
 
@@ -39,13 +39,13 @@ $ show.sh my-favorite-bbs-intro
 [ image scans onto your terminal, line by line ]
 ```
 
-Static images and ASCII/ANSI art scan in gracefully, line by line, like text crawling up an old terminal. Animated images play live for a few seconds instead — chafa handles the frame-by-frame rendering.
+Static images and ASCII/ANSI art scan in gracefully, line by line, like text crawling up an old terminal. Animated images play live for a few seconds instead - chafa handles the frame-by-frame rendering.
 
 ---
 
 ## Usage
 
-`show.sh` is meant to **live inside `.csplash`** — the very folder that holds your collection of terminal welcome images. The script and your art sit together, so the whole thing is one self-contained, portable, drop-in-anywhere unit.
+`show.sh` is meant to **live inside `.csplash`** the very folder that holds your collection of terminal welcome images. The script and your art sit together, so the whole thing is one self-contained, portable, drop-in-anywhere unit.
 
 ### Setup
 
@@ -60,7 +60,7 @@ Now drop your images, ASCII/ANSI art, or animations straight into `~/.csplash/` 
 
 ```
 ~/.csplash/
-├── show.sh              # the script itself — lives here, not somewhere else
+├── show.sh              # the script itself lives here, not somewhere else
 ├── amiga-boot.png
 ├── bbs-welcome.ans
 ├── matrix-rain.gif
@@ -83,13 +83,13 @@ show -h, --help     # show all of the above
 
 A closer look at each:
 
-- **`show`** — no arguments, pure chance. Picks any file from `.csplash` at random and displays it. This is the one you'd run on every new terminal.
-- **`show <keyword>`** — narrows the random pick to files whose *name* contains `<keyword>` (case-insensitive). Great for grouping collections by prefix or tag, e.g. `show retro`, `show amiga`, `show xmas`.
-- **`show -l` / `show --list`** — lists the contents of your `.csplash` folder, so you can see what's in rotation. Accepts an optional `ls` flag as a second argument, e.g. `show -l -la` for a long listing.
-- **`show -d` / `show --dir`** — prints the resolved path of your splash folder. Handy for scripting or double-checking where CSplash is actually looking (especially if `CSPLASH_DIR` is set).
-- **`show -e` / `show --edit`** — opens `show.sh` itself in `nano`, right from wherever it lives inside `.csplash`. Since script and collection live together, editing the show is always one command away.
-- **`show -v` / `show --version`** — prints the CSplash banner and version.
-- **`show -h` / `show --help`** — prints usage help, including the environment variables below.
+- **`show`** - no arguments, pure chance. Picks any file from `.csplash` at random and displays it. This is the one you'd run on every new terminal.
+- **`show <keyword>`** - narrows the random pick to files whose *name* contains `<keyword>` (case-insensitive). Great for grouping collections by prefix or tag, e.g. `show retro`, `show amiga`, `show xmas`.
+- **`show -l` / `show --list`** - lists the contents of your `.csplash` folder, so you can see what's in rotation. Accepts an optional `ls` flag as a second argument, e.g. `show -l -la` for a long listing.
+- **`show -d` / `show --dir`** - prints the resolved path of your splash folder. Handy for scripting or double-checking where CSplash is actually looking (especially if `CSPLASH_DIR` is set).
+- **`show -e` / `show --edit`** - opens `show.sh` itself in `nano`, right from wherever it lives inside `.csplash`. Since script and collection live together, editing the show is always one command away.
+- **`show -v` / `show --version`** - prints the CSplash banner and version.
+- **`show -h` / `show --help`** - prints usage help, including the environment variables below.
 
 ### Your collection, anywhere
 
@@ -123,7 +123,7 @@ That's it. Open a terminal, get a splash. Just like connecting to your favorite 
 
 ## Credits
 
-- **chafa** — the terminal graphics engine that makes this all possible: https://hpjansson.org/chafa/
-- **CSplash** — by Mario Lohajner, 2024
+- **chafa** - the terminal graphics engine that makes this all possible: https://hpjansson.org/chafa/
+- **CSplash** - by Mario Lohajner, 2024 (2026)
 
 *Dial-up tone not included. Nostalgia guaranteed.*
