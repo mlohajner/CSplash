@@ -29,14 +29,14 @@ slow_scan() {
 	while IFS=$'\n' read -r line
 	do
 		echo "$line"
-		sleep 0.01
+		sleep 0.006
 	done
 	printf "\e[0m\e[?25h"
 }
 
 header() {
-	printf " \\ CSS \\  Chafa Splash Show V3.0\n"
-	printf "          😃 by Mario Lohajner 2024\n"
+	printf " \\ CSS \\  Chafa Splash Show V4.0\n"
+	printf "          😃 by Mario Lohajner 2024-2026\n"
 	printf "\n"
 }
 
@@ -143,7 +143,9 @@ if [ -f "$filename" ]; then
 	file=${filename##*/}
 	base=${file%%.*}
 	echo "$base"
-	if [ `identify "$filename" | wc -l` -gt 1 ] ; then
+	frames=$(identify -ping -format "%n\n" "$filename" 2>/dev/null | head -n1)
+	frames=${frames:-1}
+	if [ "$frames" -gt 1 ]; then
 		timeout 5 chafa "$filename" -w 9 --margin-bottom 5 --bg "$bg"
 	else
 		chafa "$filename" -w 9 --margin-bottom 5 --bg "$bg" | slow_scan
