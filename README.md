@@ -126,6 +126,9 @@ Add classes to your image collection (or monthly calendar or by the hour of the 
 Snoopy.cartoons.jpg  
 Mickey Mouse.cartoons.gif  
 Captain America.comics.webp  
+Amiga.logos.svg  
+Commodore.logos.bmp
+
 **Now, when you ececute:**  
 ```
 show cartoon
@@ -133,6 +136,10 @@ show cartoon
 **OR**  
 ```
 show comic
+```
+**OR**
+```
+show logo
 ```
 **...you guessed it...**
 
